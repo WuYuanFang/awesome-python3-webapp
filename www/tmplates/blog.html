@@ -1,0 +1,16 @@
+{% extends '__base__.html' %}
+{% block title %}{{ blog.name }}}{% endblock %}
+
+{% block beforehead %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="uk-width-medium-3-4" >
+        <article class="uk-article">
+            <h2>{{ blog.name }}</h2>
+            <p class="uk-article-meta">发表于{{ blog.created_at|datetime }}</p>
+            <p>{{ blog.html_content|safe }}</p>
+        </article>
+    </div>
+{% endblock %}
